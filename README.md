@@ -1,32 +1,20 @@
-# Sinete Cirúrgica – Link Page
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Projeto simples de **landing page / bio link** desenvolvido em **React** com **Tailwind CSS**, criado para centralizar os principais links e redes sociais da Sinete Cirúrgica.
+# Run and deploy your AI Studio app
 
-## Objetivo
-- Centralizar links importantes da marca
-- Apresentar identidade visual profissional
-- Facilitar o acesso rápido às redes sociais e WhatsApp
+This contains everything you need to run your app locally.
 
-## Tecnologias
-- GoogleBuild
-- React
-- Tailwind CSS
-- SVG inline para ícones
-- Imagem do mascote em Base64
+View your app in AI Studio: https://ai.studio/apps/drive/1Xe5x_hRR-310NbP37FUwnqf8vD3t0sUc
 
-## Destaques
-- Layout responsivo (mobile e desktop)
-- Estilo moderno com efeito glassmorphism
-- Gradiente de fundo com a cor principal da marca
-- Compatível com Google Build / AI Studio
+## Run Locally
 
-## Observações
-- A imagem do mascote é utilizada em Base64 para evitar problemas de importação
-- Projeto não depende de arquivos externos ou pasta `public`
+**Prerequisites:**  Node.js
 
-## Uso
-Copie o código e cole no ambiente React desejado.
 
----
-
-Sinete Cirúrgica © 2026
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
