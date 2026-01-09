@@ -86,13 +86,13 @@ const App: React.FC = () => {
         <a href="https://instagram.com/sinetecirurgica" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
           <InstagramIcon />
         </a>
-        <a href="https://wa.me/5511999999999" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
+        <a href="https://api.whatsapp.com/send?phone=551126961800" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
           <WhatsAppIcon />
         </a>
-        <a href="https://tiktok.com/@sinete" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
+        <a href="https://www.tiktok.com/@cirurgicasinete" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
           <TikTokIcon />
         </a>
-        <a href="https://facebook.com/sinete" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
+        <a href="https://www.facebook.com/sinetecirurgicaonline" target="_blank" rel="noopener noreferrer" className="hover:scale-110 hover:text-white transition-all opacity-80 hover:opacity-100">
           <FacebookIcon />
         </a>
       </div>
@@ -101,7 +101,7 @@ const App: React.FC = () => {
       <div className="w-full flex flex-col items-center space-y-3">
         <LinkItem 
           label="Fale Conosco via WhatsApp" 
-          url="https://wa.me/5511999999999" 
+          url="https://api.whatsapp.com/send?phone=551126961800" 
         />
         <LinkItem 
           label="Siga nosso Instagram" 
@@ -109,14 +109,14 @@ const App: React.FC = () => {
         />
         <LinkItem 
           label="Veja nosso TikTok" 
-          url="https://tiktok.com/@sinete" 
+          url="https://www.tiktok.com/@cirurgicasinete" 
         />
         <LinkItem 
           label="Curta no Facebook" 
-          url="https://facebook.com/sinete" 
+          url="https://www.facebook.com/sinetecirurgicaonline" 
         />
         <LinkItem 
-          label="Acesse Nosso Site Oficial" 
+          label="Acesse Nosso Site Oficial!" 
           url="https://www.sinetecirurgica.com.br" 
         />
       </div>
