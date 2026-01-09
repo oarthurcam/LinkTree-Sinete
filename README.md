@@ -8,6 +8,7 @@ Projeto simples de **landing page / bio link** desenvolvido em **React** com **T
 - Facilitar o acesso rápido às redes sociais e WhatsApp
 
 ## Tecnologias
+- GoogleBuild
 - React
 - Tailwind CSS
 - SVG inline para ícones
