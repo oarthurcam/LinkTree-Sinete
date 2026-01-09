@@ -5,54 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sinete Cirúrgica - Links</title>
+    <!-- Bibliotecas Necessárias -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        html {
-            height: 100%;
-        }
-
         body {
             font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            min-height: 100%;
+            min-height: 100vh;
             background: linear-gradient(
                 180deg,
-                #278286 0%,     /* azul petróleo bem escuro */
-                #487b82 30%,    /* transição fria e suave */
-                #2f7f7a 48%,    /* aproximação natural da cor base */
-                #38AB9C 60%,    /* COR PRINCIPAL DA MARCA */
-                #487b82 78%,    /* dessaturação gradual */
-                #428185 100%    /* fechamento elegante */
+                #278286 0%,
+                #487b82 30%,
+                #2f7f7a 48%,
+                #38AB9C 60%,
+                #487b82 78%,
+                #428185 100%
             );
             background-attachment: fixed;
-            background-size: cover;
-            overflow-x: hidden;
         }
-
         #root {
-            position: relative;
-            z-index: 1;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
   }
 }
 </script>
 </head>
 <body>
     <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState, useEffect } = React;
+
+        const WhatsAppIcon = () => (
+            <svg viewBox="0 0 24 24" fill="currentColor" style={{width: '32px', height: '32px'}}>
+                <path d="M19.7945 4.21258C17.7267 2.14211 14.9765 1.00129 12.0462 1.00024C6.00812 1.00024 1.09402 5.91382 1.09192 11.9535C1.09087 13.8842 1.59562 15.7688 2.55417 17.4296L1 23.1063L6.807 21.5831C8.40685 22.4561 10.2084 22.9157 12.0415 22.9162H12.0462C18.0832 22.9162 22.9979 18.0021 23 11.9624C23.001 9.03532 21.8628 6.28359 19.7945 4.21311V4.21258ZM12.0462 21.0663H12.0425C10.409 21.0658 8.80658 20.6267 7.40842 19.7973L7.07592 19.5999L3.62986 20.5038L4.54954 17.1438L4.33314 16.7993C3.42186 15.3497 2.94022 13.6741 2.94127 11.954C2.94337 6.93435 7.0276 2.85012 12.0499 2.85012C14.4817 2.85117 16.7676 3.79922 18.4866 5.52042C20.2058 7.24109 21.1517 9.52903 21.1507 11.9614C21.1485 16.9816 17.0643 21.0658 12.0462 21.0658V21.0663ZM17.0401 14.2477C16.7665 14.1107 15.4209 13.4488 15.1698 13.3575C14.9187 13.266 14.7365 13.2204 14.5542 13.4945C14.372 13.7687 13.8473 14.3854 13.6876 14.5676C13.5279 14.7504 13.3682 14.773 13.0946 14.6358C12.821 14.4988 11.9391 14.2099 10.8933 13.2776C10.0798 12.5517 9.53032 11.6557 9.3707 11.3815C9.21101 11.1073 9.35389 10.9592 9.49041 10.8232C9.61331 10.7003 9.76407 10.5033 9.90114 10.3436C10.0383 10.184 10.0834 10.0695 10.1748 9.88721C10.2662 9.70442 10.2205 9.5448 10.1522 9.40767C10.0839 9.27059 9.53667 7.92334 9.30818 7.37554C9.08598 6.84191 8.86017 6.91439 8.69261 6.90547C8.53292 6.89758 8.35069 6.89601 8.16791 6.89601C7.98512 6.89601 7.68886 6.96429 7.43781 7.23847C7.18677 7.51261 6.47978 8.17493 6.47978 9.52164C6.47978 10.8683 7.46042 12.1704 7.59749 12.3532C7.73457 12.536 9.52769 15.3003 12.2731 16.4863C12.926 16.7683 13.436 16.9369 13.8336 17.063C14.4891 17.2715 15.0857 17.2421 15.5574 17.1717C16.0832 17.0929 17.1767 16.5094 17.4047 15.8702C17.6326 15.2309 17.6326 14.6826 17.5644 14.5686C17.4961 14.4546 17.3133 14.3858 17.0396 14.2488Z" />
+            </svg>
+        );
+
+        const InstagramIcon = () => (
+            <svg viewBox="0 0 24 24" fill="currentColor" style={{width: '32px', height: '32px'}}>
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+        );
+
+        const LinkItem = ({ label, url }) => (
+            <a href={url} target="_blank" rel="noopener noreferrer" 
+               className="group relative flex items-center justify-center w-full max-w-[500px] bg-white/10 hover:bg-white/15 border border-white/20 text-white py-4 px-6 rounded-2xl transition-all duration-300 shadow-lg hover:-translate-y-0.5 backdrop-blur-md mb-3">
+                <span className="font-semibold text-base md:text-lg text-center">{label}</span>
+            </a>
+        );
+
+        const App = () => {
+            const mascotUrl = "data:image/png;base64,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笥";
+
+            return (
+                <div className="flex flex-col items-center px-6 py-12 md:py-16 max-w-2xl mx-auto">
+                    <div className="flex flex-col items-center text-center mb-4 w-full">
+                        <div className="relative w-32 h-32 md:w-36 md:h-36 mb-6">
+                            <div className="absolute inset-[-4px] rounded-full bg-gradient-to-tr from-[#00c2cb] to-[#48c998] opacity-30 blur-sm"></div>
+                            <div className="w-full h-full rounded-full border-4 border-white/90 overflow-hidden bg-white shadow-xl relative z-10">
+                                <img 
+                                    src={mascotUrl} 
+                                    alt="Sinete Cirurgica Mascot" 
+                                    className="w-full h-full object-cover"
+                                    style={{ 
+                                        objectPosition: '55% 45%',
+                                        transform: 'scale(1.25)'
+                                    }}
+                                />
+                            </div>
+                        </div>
+                        
+                        <h1 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-white drop-shadow-md">
+                            Sinete Cirúrgica
+                        </h1>
+                        
+                        <div className="max-w-[320px] md:max-w-md text-base md:text-lg leading-tight font-medium text-white/90 glass-card p-6 rounded-[2rem] mb-10">
+                            <p className="mb-0">Produtos Médicos, Hospitalares</p>
+                            <p className="mb-2">e Ortopédicos em um só lugar!</p>
+                            <p className="mb-2">13 Lojas em SP | 1 em Santos 🩺🏥</p>
+                            <p className="mb-0">Venha já para Cirúrgica Sinete! 🐸 💖</p>
+                        </div>
+                    </div>
+
+                    <div className="flex space-x-6 mb-10 text-white drop-shadow-md items-center">
+                        <a href="https://instagram.com/sinetecirurgica" target="_blank" className="opacity-80 hover:opacity-100 hover:scale-110 transition-all"><InstagramIcon /></a>
+                        <a href="https://wa.me/5511999999999" target="_blank" className="opacity-80 hover:opacity-100 hover:scale-110 transition-all"><WhatsAppIcon /></a>
+                    </div>
+
+                    <div className="w-full flex flex-col items-center">
+                        <LinkItem label="Fale Conosco via WhatsApp" url="https://wa.me/5511999999999" />
+                        <LinkItem label="Siga nosso Instagram" url="https://instagram.com/sinetecirurgica" />
+                        <LinkItem label="Acesse Nosso Site Oficial" url="https://www.sinetecirurgica.com.br" />
+                    </div>
+
+                    <div className="mt-16 pb-6 flex flex-col items-center">
+                        <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center mb-3 overflow-hidden border border-white/20">
+                            <img src={mascotUrl} className="w-full h-full object-cover" />
+                        </div>
+                        <span className="text-[10px] md:text-xs uppercase tracking-[0.3em] font-bold text-white/50">Sinete Cirúrgica © 2026</span>
+                    </div>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
 </body>
 </html>
